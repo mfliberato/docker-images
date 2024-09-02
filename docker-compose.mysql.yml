@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: meu_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: docker_pwd
+      MYSQL_DATABASE: docker_db
+      MYSQL_USER: docker_usr
+      MYSQL_PASSWORD: docker_pwd
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - mysql_network
+
+volumes:
+  mysql_data:
+
+networks:
+  mysql_network:
