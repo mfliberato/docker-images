@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  postgres:
+    image: postgres:latest  # Usa a imagem oficial do PostgreSQL
+    container_name: meu_postgres  # Nome do container
+    environment:
+      POSTGRES_USER: docker_usr  # Usuário do PostgreSQL
+      POSTGRES_PASSWORD: docker_pwd  # Senha do PostgreSQL
+      POSTGRES_DB: curso_docker  # Nome do banco de dados padrão
+    ports:
+      - "5432:5432"  # Expõe a porta 5432 para o host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Volume persistente para dados
+
+volumes:
+  postgres_data:
