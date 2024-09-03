@@ -28,12 +28,3 @@ environment:
   POSTGRES_USER: your_user
   POSTGRES_PASSWORD: your_password
   POSTGRES_DB: your_database
-
-## Instruções de Uso
-
-### 1. Subir o Ambiente
-
-Para iniciar o ambiente Postgres, execute o comando abaixo:
-
-```bash
-docker-compose -f docker-compose.postgres.yml up -d
